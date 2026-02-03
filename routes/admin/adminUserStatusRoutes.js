@@ -3,14 +3,15 @@ import {
     getUsers,
     toggleUserBlock,
 } from "../../controllers/admin/adminUserController.js";
-import { protect } from "../../middlewares/authMiddleware.js";
-import { adminOnly } from "../../middlewares/adminMiddleware.js";
+import { protect } from "../../controllers/admin/middlewares/authMiddleware.js";
+import { adminOnly } from "../../controllers/admin/middlewares/adminMiddleware.js";
 
 const router = express.Router();
 
 router.use(protect, adminOnly);
 
 router.get("/", getUsers);
-router.put("/block/:id", toggleUserBlock);
+
+router.put("/:id/status", toggleUserBlock);
 
 export default router;
