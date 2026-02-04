@@ -10,6 +10,7 @@ import adminUserStatusRoutes from "./routes/admin/adminUserStatusRoutes.js";
 import adminOrderRoutes from "./routes/admin/adminOrderRoutes.js";
 import adminCategoryRoutes from "./routes/admin/adminCategoryRoutes.js";
 import adminDashboardRoutes from "./routes/admin/adminDashboardRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
 
 dotenv.config();
 
@@ -38,6 +39,7 @@ app.use("/api/admin/users", adminUserStatusRoutes);
 app.use("/api/admin/orders", adminOrderRoutes);
 app.use("/api/admin/categories", adminCategoryRoutes);
 app.use("/api/admin/dashboard", adminDashboardRoutes);
+app.use("/api/orders", orderRoutes);
 /* ======================
    DB + SERVER
 ====================== */

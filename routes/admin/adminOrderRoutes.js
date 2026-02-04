@@ -4,8 +4,8 @@ import {
   updateOrderStatus,
   
 } from "../../controllers/admin/adminOrderController.js";
-import { protect } from "../../controllers/admin/middlewares/authMiddleware.js";
-import { adminOnly } from "../../controllers/admin/middlewares/adminMiddleware.js";
+import { protect } from "../../middlewares/authMiddleware.js";
+import { adminOnly } from "../../middlewares/adminMiddleware.js";
 
 const router = express.Router();
 
