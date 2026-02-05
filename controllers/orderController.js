@@ -45,7 +45,7 @@ export const createOrder = async (req,res) => {
         const order = await Order.create({
             user:req.user._id,
             items:items.map(item => ({
-                productId:item.productId,
+                productId:item._id,
                 name:item.name,
                 quantity:item.quantity,
                 price:item.price,

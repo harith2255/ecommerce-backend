@@ -12,7 +12,7 @@ const router = express.Router();
 router.use(protect, adminOnly);
 
 router.get("/", getOrders);
-router.get("/:id", updateOrderStatus);
+router.put("/:id", updateOrderStatus);
 
 
 export default router;
