@@ -25,7 +25,7 @@ app.use(express.json());
 // ✅ CORS FIX (THIS IS THE KEY)
 app.use(
   cors({
-    origin: ["http://localhost:3000","https://ecommerce-frontend-indol-delta.vercel.app/"], // frontend
+    origin: ["http://localhost:3000","https://ecommerce-frontend-indol-delta.vercel.app"], // frontend
     credentials: true,
   })
 );
