@@ -29,7 +29,8 @@ app.use(
     credentials: true,
   })
 );
-app.options("*", cors()); // 🔥 Add this
+app.options("/*", cors());
+
 /* ======================
    ROUTES
 ====================== */
